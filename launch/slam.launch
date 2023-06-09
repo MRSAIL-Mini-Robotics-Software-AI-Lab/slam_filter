@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="/odom_topic"  value="/orbslam/odom"/>
+    <param name="/filtered_odom_topic"   value="/orbslam/odom_filtered"/>
+    <param name="/max_move_dist"   value="0.7"/>
+    <param name="/num_avg_readings"   value="8"/>
+
+    <node name="slam_filter" pkg="slam_filter" type="slam_filter.py" output="screen"/>
+</launch>
